@@ -49,7 +49,7 @@ const deleteTask = async (req, res, next)=>{
                     id: id
                 }
             })
-            console.log(task)
+            // console.log(task)
             return res.status(200).json({status: "Deleted", task: task})
         }
         res.status(404).json({message: "Task not found"})
