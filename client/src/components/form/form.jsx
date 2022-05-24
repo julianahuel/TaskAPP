@@ -31,7 +31,7 @@ const Form = ()=>{
         
         setLoading(false)
             
-        await Swal.fire("Done!", "The task was added", "success")
+        Swal.fire("Done!", "The task was added", "success")
         .then((res)=>{
             if(res.isConfirmed || res.dismiss==='backdrop') navigate('/task')
         })

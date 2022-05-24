@@ -33,7 +33,7 @@ const TaskList = ()=>{
             Task List
         </h1>
         <Grid container >
-            {tasks ?tasks.map(task=>{
+            {tasks.length ?tasks.map(task=>{
                 return (
                     <Card key={task.id} variant='outlined' style={{color:'white',backgroundColor:'#262626'}} className= {style.card}>
                         <CardContent >
@@ -51,7 +51,8 @@ const TaskList = ()=>{
                         </CardContent>
                     </Card>
                 )
-            }):<h1>There isnt tasks</h1>}
+            }): <Typography variant='h6' color='error'>There isn't tasks</Typography>
+            }
         </Grid>
         </>
     )
